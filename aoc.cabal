@@ -1,0 +1,23 @@
+cabal-version: 3.4
+name:           aoc
+version:        0.1.0.0
+build-type:     Simple
+
+common common
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N -j
+  build-depends:
+      base >=4.7 && <5
+  default-language: GHC2021
+
+executable main1a
+  import: common
+  hs-source-dirs:
+      src/main1
+  main-is: main1a.hs
+executable main1b
+  import: common
+  hs-source-dirs:
+      src/main1
+  main-is: main1b.hs
+  build-depends:
+      text
