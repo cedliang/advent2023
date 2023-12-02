@@ -7,6 +7,8 @@ common common
   ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N -j
   build-depends:
       base >=4.7 && <5
+    , text
+    , split
   default-language: GHC2021
 
 executable main1a
@@ -19,5 +21,13 @@ executable main1b
   hs-source-dirs:
       src/main1
   main-is: main1b.hs
-  build-depends:
-      text
+executable main2a
+  import: common
+  hs-source-dirs:
+      src/main2
+  main-is: main2a.hs
+executable main2b
+  import: common
+  hs-source-dirs:
+      src/main2
+  main-is: main2b.hs

@@ -7,7 +7,7 @@ import Prelude hiding (filter, head, last, readFile, words)
 
 main :: IO ()
 main = do
-  fileLines <- words <$> readFile "src/main1/Day1.txt"
+  fileLines <- words <$> readFile "src/main1/input.txt"
   let digits = filter isDigit . transformText <$> fileLines
   let sums = sumChars <$> digits
   print $ sum sums
